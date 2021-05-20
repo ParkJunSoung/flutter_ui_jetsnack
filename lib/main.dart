@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_jetsnack/ui/body_mid/card_list.dart';
+import 'package:flutter_ui_jetsnack/ui/body_mid/card_mid.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 void main() => runApp(MaterialApp(
@@ -9,7 +11,7 @@ void main() => runApp(MaterialApp(
     theme: ThemeData(
       primaryColor: Colors.black,
     ),
-    home: Example()));
+    home: CardView()));
 
 class Example extends StatefulWidget {
   @override
