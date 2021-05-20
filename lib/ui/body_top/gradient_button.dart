@@ -26,95 +26,97 @@ class BodyTop extends StatelessWidget {
         child: Container(
           width: 400,
           height: 40,
-          child: ListView(
-            scrollDirection: Axis.horizontal,
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 20,
-                      child: FittedBox(
-                        child: Padding(
-                          padding: const EdgeInsets.all(0),
-                          child: IconButton(
-                              icon: Icon(
-                                Icons.wifi,
-                                color: Colors.deepPurple,
-                                size: 30,
-                              ),
-                              onPressed: () {}),
+          child: Expanded(
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Container(
+                        width: 20,
+                        child: FittedBox(
+                          child: Padding(
+                            padding: const EdgeInsets.all(0),
+                            child: IconButton(
+                                icon: Icon(
+                                  Icons.wifi,
+                                  color: Colors.deepPurple,
+                                  size: 30,
+                                ),
+                                onPressed: () {}),
+                          ),
                         ),
+                        decoration: kInnerDecoration,
                       ),
-                      decoration: kInnerDecoration,
                     ),
+                    decoration: kGradientBoxDecoration,
                   ),
-                  decoration: kGradientBoxDecoration,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      child: Center(
-                          child: Text("Organic", textAlign: TextAlign.center)),
-                      decoration: kInnerDecoration,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Container(
+                        width: 100,
+                        child: Center(
+                            child: Text("Organic", textAlign: TextAlign.center)),
+                        decoration: kInnerDecoration,
+                      ),
                     ),
+                    decoration: kGradientBoxDecoration,
                   ),
-                  decoration: kGradientBoxDecoration,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      child: Center(
-                          child: Text("Gluten-free", textAlign: TextAlign.center)),
-                      decoration: kInnerDecoration,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Container(
+                        width: 100,
+                        child: Center(
+                            child: Text("Gluten-free", textAlign: TextAlign.center)),
+                        decoration: kInnerDecoration,
+                      ),
                     ),
+                    decoration: kGradientBoxDecoration,
                   ),
-                  decoration: kGradientBoxDecoration,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      child: Center(
-                          child: Text("Dairy-free", textAlign: TextAlign.center)),
-                      decoration: kInnerDecoration,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Container(
+                        width: 100,
+                        child: Center(
+                            child: Text("Dairy-free", textAlign: TextAlign.center)),
+                        decoration: kInnerDecoration,
+                      ),
                     ),
+                    decoration: kGradientBoxDecoration,
                   ),
-                  decoration: kGradientBoxDecoration,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Container(
-                      width: 100,
-                      child: Center(
-                          child: Text("Center", textAlign: TextAlign.center)),
-                      decoration: kInnerDecoration,
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    child: Padding(
+                      padding: const EdgeInsets.all(3.0),
+                      child: Container(
+                        width: 100,
+                        child: Center(
+                            child: Text("Center", textAlign: TextAlign.center)),
+                        decoration: kInnerDecoration,
+                      ),
                     ),
+                    decoration: kGradientBoxDecoration,
                   ),
-                  decoration: kGradientBoxDecoration,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
