@@ -28,7 +28,7 @@ class CardView extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 15,right: 220),
+                padding: const EdgeInsets.only(left: 15,right: 200),
                 child: Text('Android\'s picks ',style: TextStyle(color: Colors.deepPurple,fontWeight: FontWeight.bold,fontSize: 18),),
               ),
               IconButton(icon: Icon(Icons.arrow_forward,color: Colors.deepPurple,), onPressed: (){}),

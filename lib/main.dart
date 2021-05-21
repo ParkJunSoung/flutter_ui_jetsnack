@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_jetsnack/ui/body_mid/card_list.dart';
-import 'package:flutter_ui_jetsnack/ui/body_mid/card_mid.dart';
-import 'package:flutter_ui_jetsnack/ui/body_top/gradient_button.dart';
 import 'package:flutter_ui_jetsnack/ui/detail_page.dart';
 import 'package:flutter_ui_jetsnack/ui/home.dart';
+import 'package:flutter_ui_jetsnack/ui/search.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 void main() => runApp(MaterialApp(
@@ -14,7 +12,7 @@ void main() => runApp(MaterialApp(
     theme: ThemeData(
       primaryColor: Colors.black,
     ),
-    home: DetailPage()));
+    home: Search()));
 
 class Example extends StatefulWidget {
   @override
@@ -27,10 +25,7 @@ class _ExampleState extends State<Example> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    Text(
-      'Likes',
-      style: optionStyle,
-    ),
+    DetailPage(),
     Text(
       'Search',
       style: optionStyle,
