@@ -12,7 +12,7 @@ void main() => runApp(MaterialApp(
     theme: ThemeData(
       primaryColor: Colors.black,
     ),
-    home: Search()));
+    home: Example()));
 
 class Example extends StatefulWidget {
   @override

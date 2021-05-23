@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_jetsnack/ui/body_mid/card_mid.dart';
 
-
 class DetailPage extends StatefulWidget {
   const DetailPage({Key key}) : super(key: key);
+
   @override
   _DetailPageState createState() => _DetailPageState();
 }
@@ -34,6 +34,7 @@ class _DetailPageState extends State<DetailPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ListView(
+              primary: false,
               controller: scrollController,
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
@@ -45,25 +46,27 @@ class _DetailPageState extends State<DetailPage> {
                       width: 500,
                       height: 200,
                     ),
-                Positioned(
-                  top: 0,
-                  child: AnimatedPositioned(
-                    width: offset ? 70 : 200,
-                    duration: Duration(seconds: 1),
-                    child: Container(
-                      width: 200,
-                      height: 200,
-                      decoration: BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage('assets/images/cupcake.png'),
-                          fit: BoxFit.fill,
+                    Positioned(
+                      top: 0,
+                      child: FittedBox(
+                        child: AnimatedPositioned(
+                          width: offset ? 70 : 200,
+                          duration: Duration(seconds: 1),
+                          child: Container(
+                            width: 200,
+                            height: 200,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('assets/images/cupcake.png'),
+                                fit: BoxFit.fill,
+                              ),
+                              color: Colors.black,
+                              shape: BoxShape.circle,
+                            ),
+                          ),
                         ),
-                        color: Colors.black,
-                        shape: BoxShape.circle,
                       ),
                     ),
-                  ),
-                ),
                   ],
                 ),
                 Divider(),

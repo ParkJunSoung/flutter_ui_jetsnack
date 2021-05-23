@@ -13,22 +13,10 @@ class HomePage extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-                width: 500,
-                height: 75,
-                child: BodyTop()),
-          Container(
-              width: 500,
-              height: 250,
-              child: CardView()),
-          Container(
-              width: 500,
-              height: 200,
-              child: CardMid()),
-            Container(
-                width: 500,
-                height: 200,
-                child: CardMid()),
+            Container(width: 500, height: 75, child: BodyTop()),
+            Container(width: 500, height: 250, child: CardView()),
+            Container(width: 500, height: 200, child: CardMid()),
+            Container(width: 500, height: 200, child: CardMid()),
           ],
         ),
       ),
