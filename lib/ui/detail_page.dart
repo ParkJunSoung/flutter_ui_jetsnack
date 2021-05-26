@@ -12,18 +12,18 @@ class DetailPage extends StatefulWidget {
 @override
 class _DetailPageState extends State<DetailPage> {
   ScrollController scrollController = ScrollController();
-  bool offset = false;
+  bool offset = true;
 
   void initState() {
     scrollController.addListener(() {
-      print(scrollController.offset);
-      // if (offset && scrollController.offset != 0) {
-      //   offset = true;
-      //   setState(() {});
-      // } else if (!offset && scrollController.offset == 1) {
-      //   offset = false;
-      //   setState(() {});
-      // }
+
+      if (offset && scrollController.offset != 0) {
+        offset = true;
+        setState(() {});
+      } else if (!offset && scrollController.offset == 0) {
+        offset = false;
+        setState(() {});
+      }
     });
     super.initState();
   }
@@ -48,12 +48,13 @@ class _DetailPageState extends State<DetailPage> {
                       height: 200,
                     ),
                     Positioned(
+                      width: offset ?  300: 100,
                       child: FittedBox(
                         child: AnimatedPositioned(
                           duration: Duration(seconds: 2),
                           curve: Curves.easeInOut,
                           child: Container(
-                            width: offset ? 200 : 100,
+                            width: 300,
                             height: 200,
                             decoration: BoxDecoration(
                               image: DecorationImage(
