@@ -12,11 +12,28 @@ class HomePage extends StatelessWidget {
       scrollDirection: Axis.vertical,
       child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(width: 500, height: 75, child: BodyTop()),
-            Container(width: 500, height: 250, child: CardView()),
-            Container(width: 500, height: 200, child: CardMid()),
-            Container(width: 500, height: 200, child: CardMid()),
+            Container(
+              width: 500,
+              height: 80,
+              child: BodyTop(),
+            ),
+            Container(
+              width: 500,
+              height: 220,
+              child: CardView(),
+            ),
+            Container(
+              width: 500,
+              height: 220,
+              child: CardMid(),
+            ),
+            Container(
+              width: 500,
+              height: 220,
+              child: CardMid(),
+            ),
           ],
         ),
       ),

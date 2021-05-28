@@ -20,7 +20,7 @@ class _DetailPageState extends State<DetailPage> {
       if (offset && scrollController.offset != 0) {
         offset = true;
         setState(() {});
-      } else if (!offset && scrollController.offset == 0) {
+      } else if (!offset && scrollController.offset == 1) {
         offset = false;
         setState(() {});
       }
@@ -39,6 +39,7 @@ class _DetailPageState extends State<DetailPage> {
             ListView(
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
+              primary: false,
               children: [
                 Stack(
                   children: [
@@ -48,7 +49,7 @@ class _DetailPageState extends State<DetailPage> {
                       height: 200,
                     ),
                     Positioned(
-                      width: offset ?  300: 100,
+                      left: offset ? 100 : 200,
                       child: FittedBox(
                         child: AnimatedPositioned(
                           duration: Duration(seconds: 2),

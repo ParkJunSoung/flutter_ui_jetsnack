@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ui_jetsnack/ui/detail_page.dart';
 import 'package:flutter_ui_jetsnack/ui/home.dart';
 import 'package:flutter_ui_jetsnack/ui/search.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
@@ -22,7 +21,7 @@ class Example extends StatefulWidget {
 class _ExampleState extends State<Example> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.w600);
+  TextStyle(fontSize: 30, fontWeight: FontWeight.w600,);
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
     Search(),
@@ -39,14 +38,12 @@ class _ExampleState extends State<Example> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar:  AppBar(
         backgroundColor: Colors.white,
       title: Text('Delivery to 1600 Amphitheater Way',style: TextStyle(color: Colors.black),),
       ),
       backgroundColor: Colors.white,
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
+      body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
           border:  Border.all(color: Colors.black),
@@ -69,8 +66,9 @@ class _ExampleState extends State<Example> {
               iconSize: 24,
               padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
               duration: Duration(milliseconds: 400),
-              tabBackgroundColor: Colors.black,
-              color: Colors.white,
+              tabBackgroundColor: Colors.deepPurpleAccent,
+              // color: Colors.deepPurpleAccent,
+              tabBorder: _selectedIndex == 0 ? Border.all(color: Colors.white) : null,
               tabs: [
                 GButton(
                   icon: Icons.home,
