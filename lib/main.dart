@@ -38,10 +38,6 @@ class _ExampleState extends State<Example> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:  AppBar(
-        backgroundColor: Colors.white,
-      title: Text('Delivery to 1600 Amphitheater Way',style: TextStyle(color: Colors.black),),
-      ),
       backgroundColor: Colors.white,
       body: _widgetOptions.elementAt(_selectedIndex),
       bottomNavigationBar: Container(
